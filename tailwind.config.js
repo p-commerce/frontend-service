@@ -18,6 +18,12 @@ module.exports = {
       },
       fontWeight:{
         "bold": "700",
+        "base": "400"
+      },
+      fontSize:{
+      "sm":"14px",
+      "base": "16px",
+      "lg":"24px",
       }
     },
   },

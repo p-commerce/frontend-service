@@ -1,10 +1,9 @@
-import './App.css';
-
+import React from "react";
+import { Register } from "./pages/userManagment/register";
 function App() {
   return (
-    <div className="bg-[#3CD278] w-100 h-20">
-      <h1>tailwind trial</h1>
-      
+    <div>
+      <Register/>
     </div>
   );
 }
