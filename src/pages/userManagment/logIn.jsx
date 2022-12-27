@@ -15,11 +15,11 @@ export function LogIn() {
         <div className="pl-[5%] mt-[-5%]">
         <h2 className=" text-lg text-bold pb-5  ">Get Into your Account</h2>
         <Formik
-            initialValues = {{firstName:'', lastName:'',phoneNumber:'', email:'', password:'' }}
+            initialValues = {{ email:'', password:'' }}
             validate = {values =>{
             const errors = {};
-            if(!values.phoneNumber){
-                errors.phoneNumber = "required";
+            if(!values.email){
+                errors.email = "required";
             }else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)){
                 errors.email = "invalid email address";
             }
