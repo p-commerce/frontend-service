@@ -1,19 +1,19 @@
 import React from "react";
 import MyImage from "../../images/d1.png"
 import {Formik} from 'formik'
-export function Register() {
+export function LogIn() {
     return (
     <div className="bg-[#F9F9F9] w-[100%] h-[100vh] overflow-hidden">
         <div className="bg-white h-[10vh] w-full flex justify-between p-7" >
         <div>*p logo</div>
         <div>
-             <a href="/signUp" className="pr-5">SignUp</a>
-             <a href="/logIn" className="text-[#EF5555] bold"> LogIn</a>
+            <a href="/signUp" className="pr-5 text-[#EF5555] bold">SignUp</a>
+            <a href="/logIn" className=""> LogIn</a>
         </div>
         </div>
-        <div className="flex justify-between pt-3 pl-8">
-        <div className="pl-[5%]">
-        <h2 className=" text-lg text-bold pb-5  ">Create an Account</h2>
+        <div className="flex justify-between pt-[10%] pl-[8%]">
+        <div className="pl-[5%] mt-[-5%]">
+        <h2 className=" text-lg text-bold pb-5  ">Get Into your Account</h2>
         <Formik
             initialValues = {{firstName:'', lastName:'',phoneNumber:'', email:'', password:'' }}
             validate = {values =>{
@@ -41,26 +41,14 @@ export function Register() {
             isSubmitting,
             }) =>(
             <form onSubmit={handleSubmit} className="">
-                <div className="flex">
-                    <div className="mr-[7em]">
-              <label className=" block text-gray-700 text-sm font-bold mb-2">First Name *</label>
-                <input type="text" name="firstName" onChange={handleChange}  value={values.firstName} className="shadow border-[#FFE4E4] border-[2px] rounded w-[180%] h-[6vh] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline " placeholder="first Name" /> {errors.firstName && touched.firstName && errors.firstName} 
-                </div>
-                <div>
-              <label className="block text-gray-700 text-sm font-bold mb-2">Last Name *</label>
-                <input type="text" name="lastName" onChange={handleChange}  value={values.lastName} required placeholder="last name" className="shadow border-[2px] border-[#FFE4E4] rounded w-[180%] h-[6vh] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline " /> {errors.lastName && touched.lastName && errors.lastName}
-                </div>
-                </div>
-              <label className="block text-gray-700 text-sm font-bold mb-2">phone number *</label>
-                <input type="text" name="phoneNumber" onChange={handleChange}  value={values.phoneNumber} required placeholder="phone number" className="shadow border-[2px] border-[#FFE4E4] h-[6vh] rounded w-[100%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline " /> {errors.phoneNumber && touched.phoneNumber && errors.phoneNumber}
                 <label className="block text-gray-700 text-sm font-bold mb-2">email</label>
                 <input type="email" name="email" onChange={handleChange}  value={values.email} placeholder="email" className="shadow border-[2px] border-[#FFE4E4] rounded w-[80%] py-2 px-3 h-[6vh] text-gray-700 leading-tight focus:outline-none focus:shadow-outline "/> {errors.email && touched.email && errors.email}
                 <label className="block text-gray-700 text-sm font-bold mb-2">Password</label>
                 <input type="password" name="password" onChange={handleChange}  value={values.password} placeholder="Paasword" className="shadow border-[2px] border-[#FFE4E4] rounded w-[100%] py-2 px-3 h-[6vh] text-gray-700 leading-tight focus:outline-none focus:shadow-outline "/> {errors.password && touched.password && errors.password}
                 <input type="checkbox" className="mt-5"/>
-                <label>I agree to User Agreement </label>
+                <label>Remember Me </label>
                 <button className="bg-[#EF5555] hover:bg-[#f6a1a1] text-white font-bold py-2 mt-5 px-4 w-[80%] rounded focus:outline-none focus:shadow-outline" type="submit" disabled={isSubmitting}>
-        Sign In
+        Log In
         </button>
             </form>
             )}
