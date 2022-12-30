@@ -54,8 +54,10 @@ export function LogIn() {
             )}
         </Formik>
         </div>
-        <div className="hidden lg:block pl-[30%] ">
+        <div className="hidden lg:block pl-[30%] mt-[-10%] ">
             <img src={MyImage} alt="demo" className="w-[60%]"/>
+            <h1 className=" text-lg font-semibold text-right pr-[45%] pt-5">Lorem, ipsum dolor sit amet <br /> consectetur adipisicing. </h1>
+            <p className=" font-light text-right pr-[45%] ">Lorem ipsum dolor sit amet consectetur, adipisicing <br /> Id, excepturi tempore vitae laudantium unde <br /> rem repellendus vero quae dicta sequi </p>
         </div>
         </div>
         <svg width="1519" height="259" viewBox="0 0 1920 299" fill="none" xmlns="http://www.w3.org/2000/svg">
