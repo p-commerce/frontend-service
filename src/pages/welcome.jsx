@@ -1,22 +1,15 @@
 import React from "react"
 import {SlArrowRight} from "react-icons/sl"
-import {AiOutlineShoppingCart} from "react-icons/ai"
+import Navbar from "./common/navBar"
 export function Welcome() {
     return(
         <div className="bg-[#F9F9F9] w-[100%] h-[100vh] overflow-hidden">
-        <div className="bg-white h-[10vh] w-full flex justify-between p-7" >
-        <div>*p logo</div>
-        <div>
-            <a href="/cart" className="pr-5 font-semibold"> <AiOutlineShoppingCart className="inline" /> Cart </a>
-            <a href="/signUp" className="pr-5 font-semibold">Manage</a>
-            <a href="/logIn" className="font-semibold "> Stats</a>
-        </div>
-        </div>
+        <Navbar />
         <div className="pl-[12em] py-[9em]">
             <h1 className=" text-lg font-bold">Welcome Back, Customer!</h1>
-            <p className="text-sm text-[#898989] py-1 ">What would you line to do today?</p>
+            <p className="text-sm text-[#898989] py-1 ">What would you like to do today?</p>
             <ul className="">
-                <li className="font-semibold py-2"> <SlArrowRight color="#EF5555" size={12} className="inline" />  <a href="/manage">  Manage</a></li>
+                <li className="font-semibold py-2"> <SlArrowRight color="#EF5555" size={12} className="inline" />  <a href="/dashboard">  Manage</a></li>
                 <li className="font-semibold"> <SlArrowRight color="#EF5555" size={12} className="inline" />   <a href="/buy">Buy</a></li>
                 <li className="font-semibold pt-2"> <SlArrowRight color="#EF5555" size={12} className="inline" />   <a href="/sell">Sell</a></li>
             </ul>
